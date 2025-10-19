@@ -3,6 +3,7 @@ import { Toaster, toast } from 'react-hot-toast';
 import Navbar from './components/Navbar';
 import PatientForm from './components/PatientForm';
 import PredictionResult from './components/PredictionResult';
+import FeatureGuide from './components/FeatureGuide';
 import { predictHeartDisease } from './api/predict';
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
             based on clinical parameters
           </p>
         </div>
+
+        <FeatureGuide />
 
         <div className="grid">
           <PatientForm onSubmit={handlePrediction} loading={loading} />
